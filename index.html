@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Program Your Week</title>
+        <meta charset="utf-8">
+        <link href="./resources/style.css" type="text/css" rel="stylesheet">
+        <link href="./node_modules/jquery-timepicker/jquery.timepicker.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1><span class="letter">P</span><span class="others">rogram y</span><span class="letter">O</span><span class="others"> </span><span class="letter">W</span><span class="others">eek</span><span class="letter">!</span></h1>
+        </header>
+        <section id="appBody">
+            <div id="container">
+                <img src="./resources/catpic.jpg" id="catpic">
+                <div id="day">
+                    <table id ="ogTable">
+                        <colgroup span="2">
+                            <col id="timeCol">
+                            <col id="activityCol">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th id="dayName" colspan="2"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="time">
+                                    <label for="startTime">Start Time:</label> <!--label goes with id, not name-->
+                                    <input class="timepicker" id="startTime" name="startTime">
+                                    <label for="endTime">End Time:</label>
+                                    <input class="timepicker" id="endTime" name="endTime">
+                                </td>
+                                <td id="activity">
+                                    <label for="activityInput">Activity:</label>
+                                    <input type="text" class="activityInput" id="activityInput" name="activityInput">
+                                    <input type="checkbox" id="activityCheck" name="activityCheck">
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                              <td colspan="2"><button id="addRow" class="tableButton">Add New Row</button><button id="deleteRow" class="deleteButton">Delete Last Row</button></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <br>
+        <section id="clickEvents">
+            <div id="buttons">
+                <button id="update">Update Activity</button>
+                <!--<button id="newRow">Add Row</button>-->
+                <button id="addDay">Add Day</button>
+            </div>
+            <div id="notes">
+                <p class="note">Click "Add Day" to begin planning your week!</p>
+            </div>
+        </section>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous"></script>
+        <script src="./resources/main.js"></script>
+        <script src="./node_modules/jquery-timepicker/jquery.timepicker.js"></script>
+    </body>
+    <foot>
+        <p id="copyright">&copy;Toni Latimer, Program Your Week, 2020</p>
+    </foot>
+</html>
